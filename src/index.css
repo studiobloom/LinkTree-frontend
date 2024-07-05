@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom gradient class */
+.bg-gradient-purple {
+  @apply bg-gradient-to-r from-purpleTheme to-purpleTheme-dark;
+}
