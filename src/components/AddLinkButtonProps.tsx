@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogTrigger } from './Dialog';
 import LinksForm, { LinksFormData } from '../forms/LinksForm';
 
 type AddLinkButtonProps = {
-  onSave: (data: LinksFormData) => void;
+  onSave: (data: LinksFormData) => Promise<void>;
   disabled: boolean;
   isLoading: boolean;
   isOpen: boolean;
@@ -13,13 +13,11 @@ type AddLinkButtonProps = {
 };
 
 const AddLinkButton = ({ onSave, disabled, isLoading, isOpen, onOpenChange }: AddLinkButtonProps) => {
-
-
-  const handleSave = (data: LinksFormData) => {
-    onSave(data);
-    onOpenChange(false);
+  const handleSave = async (data: LinksFormData) => {
+    await onSave(data);
   };
 
+  
   return (
 
     <Dialog open={isOpen} onOpenChange={onOpenChange}>

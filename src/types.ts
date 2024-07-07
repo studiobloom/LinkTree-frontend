@@ -62,7 +62,16 @@ export type AppSettings = {
 export type User = {
   _id: string;
   email: string;
-  username: string;
+  name: string;
  
 };
 
+export type Links = {
+  
+}
+
+
+export type UpdateMyUserRequest = {
+  name: string;
+  
+};

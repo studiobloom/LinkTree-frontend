@@ -1,11 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-
-import './index.css'
-import AppRoutes from './AppRoutes.tsx'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Toaster } from "sonner";
+import './index.css';
+import AppRoutes from './AppRoutes.tsx';
 import { BrowserRouter as Router } from "react-router-dom";
 import Auth0ProviderWithNavigate from './auth/Auth0ProviderWithNavigate.tsx';
-
 import { QueryClient, QueryClientProvider } from "react-query";
 
 // instance of the QueryClient with custom option and it is set to false which 
@@ -20,21 +19,20 @@ const queryClient = new QueryClient({
 });
 
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+//Rendering the Application
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-
-
     <Router>
-    <QueryClientProvider client={queryClient}>
- <Auth0ProviderWithNavigate>
-
-
-    <AppRoutes />
-
-    </Auth0ProviderWithNavigate>
-    </QueryClientProvider>
-
+      <QueryClientProvider client={queryClient}>
+       
+       
+       <Auth0ProviderWithNavigate>
+        <AppRoutes />
+        {/* This component displays toast notifications. The visibleToasts prop limits the number of visible toasts to 1, and position specifies the toast's position on the screen. */}
+          <Toaster visibleToasts={1} position="top-right" richColors />
+          </Auth0ProviderWithNavigate>
+      </QueryClientProvider>
     </Router>
-    
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);

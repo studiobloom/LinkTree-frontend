@@ -5,25 +5,18 @@ import { useNavigate } from "react-router-dom";
 
 const AuthCallbackPage = () => {
   const navigate = useNavigate();
-  const { user, isAuthenticated, isLoading } = useAuth0();
-  console.log(user)
+  const { user } = useAuth0();
   const { createUser } = useCreateMyUser();
 
   const hasCreatedUser = useRef(false);
 
   useEffect(() => {
-    const handleUserCreation = async () => {
-      if (user?.sub && user?.email && !hasCreatedUser.current) {
-        await createUser({ auth0Id: user.sub, email: user.email });
-        hasCreatedUser.current = true;
-        navigate("/admin"); // Redirect to admin page after user is created
-      }
-    };
-
-    if (isAuthenticated && !isLoading) {
-      handleUserCreation();
+    if (user?.sub && user?.email && !hasCreatedUser.current) {
+      createUser({ auth0Id: user.sub, email: user.email });
+      hasCreatedUser.current = true;
     }
-  }, [createUser, navigate, user, isAuthenticated, isLoading]);
+    navigate("/dashboard");
+  }, [createUser, navigate, user]);
 
   return <>Loading...</>;
 };
