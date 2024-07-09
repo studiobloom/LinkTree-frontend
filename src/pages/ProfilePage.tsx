@@ -2,6 +2,10 @@
 
 import { Link } from "react-router-dom";
 import { mockUserProfile } from "../mockData";
+import { useParams } from "react-router-dom";
+import { useGetLinksByUsername } from "../api/LinksApi";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
 const ProfilePage = () => {
   const profile = mockUserProfile;

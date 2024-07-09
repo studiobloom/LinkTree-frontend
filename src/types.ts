@@ -5,8 +5,7 @@ export type Link = {
   id: string;
   title: string;
   url: string;
-  icon?: string; // Optional: for link icons
-};
+}
 
 // Define the structure for social media links
 export type SocialLink = {
@@ -30,6 +29,8 @@ export type UserProfile = {
 export type HomePageProps = {
   profile: UserProfile;
 };
+
+
 
 // Define props for a Link component (if you create one)
 export type LinkProps = {
@@ -67,7 +68,7 @@ export type User = {
 };
 
 export type Links = {
-  
+
 }
 
 
