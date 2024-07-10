@@ -7,6 +7,8 @@ export type Link = {
   url: string;
 }
 
+
+
 // Define the structure for social media links
 export type SocialLink = {
   platform: string;
@@ -14,6 +16,10 @@ export type SocialLink = {
   icon: string;
 };
 
+export type UpdateMyUserRequest = {
+  name?: string;
+  imageFile?: File;
+};
 // Define the structure for the user profile
 export type UserProfile = {
   username: string;
@@ -64,6 +70,7 @@ export type User = {
   _id: string;
   email: string;
   name: string;
+  avater:string
  
 };
 
@@ -72,7 +79,5 @@ export type Links = {
 }
 
 
-export type UpdateMyUserRequest = {
-  name: string;
-  
-};
+
+

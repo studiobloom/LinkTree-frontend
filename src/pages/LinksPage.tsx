@@ -13,6 +13,7 @@ import Sidebar from '../components/Sidebar';
 
 const LinksPage = () => {
   const { currentUser, isLoading: isUserLoading } = useGetMyUser();
+
   const { mutateAsync: createLink, isLoading: isCreateLoading } = useCreateLinks();
   const { mutateAsync: updateLink, isLoading: isUpdateLoading } = useUpdateLinks();
   const { mutateAsync: deleteLink, isLoading: isDeleteLoading } = useDeleteLink();
@@ -154,7 +155,8 @@ const LinksPage = () => {
         <div className="bg-gray-700 rounded-3xl overflow-hidden shadow-lg p-4" style={{ aspectRatio: '9/19' }}>
           <div className="flex flex-col items-center">
             <h3 className="mb-1 text-white">Preview</h3>
-            <img src={Noavater} className="w-24 h-24 rounded-full mb-4" />
+
+            <img src={currentUser?.avater ||Noavater} className="w-24 h-24 rounded-full mb-4" />
             <h2 className="text-xl font-bold text-white">{currentUser?.name}</h2>
             <div className="mt-4 w-full">
               {links?.map(link => (

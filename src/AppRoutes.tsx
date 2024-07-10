@@ -9,7 +9,7 @@ import LandingPage from './pages/HomePage';
 import ProtectedRoute from './auth/ProtectedRoute';
 import LinksPage from './pages/LinksPage';
 import UserLinksPage from './pages/UserLinksPage';
-import SettingsPage from './pages/SettingsPage';
+import SettingsPage from './pages/settingPage';
 
 const AppRoutes = () => {
   return (
