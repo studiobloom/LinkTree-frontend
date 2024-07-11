@@ -4,17 +4,16 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useGetLinksByUsername } from "../api/LinksApi";
 import { useEffect } from "react";
 import { toast } from "sonner";
-import { mockUserProfile } from "../mockData";
 import {useGetMyUser} from "../api/UserApi"
 
 
 import LoadingIcons from 'react-loading-icons'
+import { noavater } from "../types";
 
 
 const UserLinksPage = () => {
      const navigate = useNavigate();
 
-     const profile = mockUserProfile;
      const {currentUser} = useGetMyUser()
      console.log(currentUser?.name)
      const { username } = useParams<{ username: string }>();
@@ -46,12 +45,12 @@ const UserLinksPage = () => {
 
 <img
         className="mb-4 w-24 h-24 rounded-full"
-        src={profile.avatar}
+        src={currentUser?.avater || noavater}
         alt="profileImg"
       />
 
 <h1 className="text-paragraphColor-white text-2xl font-semibold hover:bg-purpleTheme-light">
-          @{username}
+          @{currentUser?.name}
         </h1>
 
         <p className="text-paragraphColor-white text-center">Welcome to my EchoLink clone

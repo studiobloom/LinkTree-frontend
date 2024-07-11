@@ -10,6 +10,8 @@ import RenderUserForm from '../components/renderUserForm';
 import { UserNameData } from '../forms/addUserNameForm';
 import { Dialog, DialogContent } from '../components/Dialog';
 import Sidebar from '../components/Sidebar';
+import { Link } from '../types';
+import LoadingIcons from 'react-loading-icons';
 
 const LinksPage = () => {
   const { currentUser, isLoading: isUserLoading } = useGetMyUser();
@@ -88,7 +90,12 @@ const LinksPage = () => {
   };
 
   if (isUserLoading || isLinksLoading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="flex flex-col justify-center items-center h-screen">
+        <LoadingIcons.Puff stroke="#98ff98" strokeOpacity={.125} height="100" width="100" />
+        <span className="text-white mt-2 text-lg">Loading...</span>
+      </div>
+    );
   }
 
   if (!currentUser || !currentUser.name) {
@@ -104,15 +111,15 @@ const LinksPage = () => {
   }
 
   return (
-    <div className=" flex flex-col  md:flex-row h-screen bg-gray-900 text-white">
+    <div className="flex flex-col h-max bg-gray-900 lg:flex-row min-h-screen">
       <Sidebar email={currentUser?.email} />
 
       {/* Main content */}
-      <div className="flex-1  h-max lg:p-10">
-        <div className="mb-4 bg-blue-900 p-4 rounded-md ">
+      <div className="flex-1 p-4 h-max lg:p-10 justify-center items-center">
+        <div className="max-w-lg mb-4 bg-blue-900 p-4 rounded-md ">
           <p className="text-blue-300">🔥 Your Linktree is live: <a href={`http://localhost:5174/${currentUser?.name}`} className="underline">{`http://localhost:5174/${currentUser?.name}`}</a></p>
         </div>
-        <div className="bg-gray-800 rounded-md shadow-md p-6">
+        <div className="bg-gray-800 rounded-md shadow-md p-6 h">
           <h2 className="text-xl font-bold mb-4 text-white">Links</h2>
 
           <AddLinkButton

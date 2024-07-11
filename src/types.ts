@@ -2,11 +2,16 @@
 
 // Define the structure for a single link
 export type Link = {
-  id: string;
+  _id: string;
   title: string;
   url: string;
 }
 
+type EditLinkData = {
+  name: string;
+  url: string;
+  linkId: string;
+}
 
 
 // Define the structure for social media links
@@ -79,5 +84,6 @@ export type Links = {
 }
 
 
+export const noavater = 'https://via.placeholder.com/150'
 
 
