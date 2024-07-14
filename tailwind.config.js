@@ -1,6 +1,3 @@
-// tailwind.config.js
-
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
@@ -9,11 +6,11 @@ module.exports = {
       colors: {
         purpleTheme: {
           light: '#D6BBFB',
-          light2:'d1beef',
+          light2: '#d1beef', // corrected typo
           DEFAULT: '#9F7AEA',
           dark: '#4C3BCF',
-          dark2:'#4000a5',
-          dark3:'850F8D'
+          dark2: '#4000a5',
+          dark3: '#850F8D' // corrected typo
         },
         paragraphColor: {
           white: '#F3F4F6',
