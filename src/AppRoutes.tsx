@@ -32,7 +32,7 @@ const AppRoutes = () => {
         />
       </Route>
       <Route
-        path="/user/:username"
+        path="/:username"
         element={
           <Layout>
             <UserLinksPage />
