@@ -11,7 +11,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'build', // Ensure this matches your output directory
+    outDir: 'dist', // Change this to 'dist'
   },
-  base: '/', // Base path for your project
+  base: '/', // Ensure this is set correctly
 });
