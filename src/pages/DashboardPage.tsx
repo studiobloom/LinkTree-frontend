@@ -14,7 +14,7 @@ import { Link } from '../types';
 import LoadingIcons from 'react-loading-icons';
 
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const CALLBACK_URL = import.meta.env.VITE_AUTH0_CALLBACK_URL;
 
 const LinksPage = () => {
   const { currentUser, isLoading: isUserLoading } = useGetMyUser();
@@ -124,8 +124,7 @@ const LinksPage = () => {
       {/* Main content */}
       <div className="flex-1 p-4 h-max lg:p-10 justify-center items-center">
         <div className="max-w-lg mb-4 bg-blue-900 p-4 rounded-md ">
-          <p className="text-blue-300">🔥 Your EchoLink  is live:
-             <a href={`${API_BASE_URL}/user/${currentUser?.name}`} className="underline">{`${API_BASE_URL}/user/${currentUser?.name}`}</a></p>
+        <p className="text-blue-300">🔥 Your EchoLink is live: <a href={`${CALLBACK_URL}/user/${currentUser?.name}`} className="underline">{`${CALLBACK_URL}/user/${currentUser?.name}`}</a></p>
         </div>
         <div className="bg-gray-800 rounded-md shadow-md p-6 h">
           <h2 className="text-xl font-bold mb-4 text-white">Links</h2>
