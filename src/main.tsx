@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Toaster } from "sonner";
-import './index.css';
+ import "./index.css"
 import AppRoutes from './AppRoutes.tsx';
 import { BrowserRouter as Router } from 'react-router-dom';import Auth0ProviderWithNavigate from './auth/Auth0ProviderWithNavigate.tsx';
 import { QueryClient, QueryClientProvider } from "react-query";
