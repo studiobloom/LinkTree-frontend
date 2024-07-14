@@ -93,10 +93,10 @@ const LinksPage = () => {
     return (
       <div className="flex flex-col justify-center items-center h-screen">
         <LoadingIcons.Puff stroke="#98ff98" strokeOpacity={.125} height="100" width="100" />
-        <span className="text-white mt-2 text-lg">Loading...</span>
+        <span className="text-white mt-2 text-lg font-bold">Loading...</span>
       </div>
     );
-  }
+  };
 
   if (!currentUser || !currentUser.name) {
     return (
@@ -117,7 +117,7 @@ const LinksPage = () => {
       {/* Main content */}
       <div className="flex-1 p-4 h-max lg:p-10 justify-center items-center">
         <div className="max-w-lg mb-4 bg-blue-900 p-4 rounded-md ">
-          <p className="text-blue-300">🔥 Your Linktree is live: <a href={`http://localhost:5174/${currentUser?.name}`} className="underline">{`http://localhost:5174/${currentUser?.name}`}</a></p>
+          <p className="text-blue-300">🔥 Your EchoLink  is live: <a href={`http://localhost:5174/user/${currentUser?.name}`} className="underline">{`http://localhost:5174/user/${currentUser?.name}`}</a></p>
         </div>
         <div className="bg-gray-800 rounded-md shadow-md p-6 h">
           <h2 className="text-xl font-bold mb-4 text-white">Links</h2>
@@ -161,7 +161,7 @@ const LinksPage = () => {
       <div className="w-80 bg-gray-800 p-4 hidden lg:block">
         <div className="bg-gray-700 rounded-3xl overflow-hidden shadow-lg p-4" style={{ aspectRatio: '9/19' }}>
           <div className="flex flex-col items-center">
-            <h3 className="mb-1 text-white">Preview</h3>
+            <h3 className="mb-1 text-white font-extrabold">Preview</h3>
 
             <img src={currentUser?.avater ||Noavater} className="w-24 h-24 rounded-full mb-4" />
             <h2 className="text-xl font-bold text-white">{currentUser?.name}</h2>

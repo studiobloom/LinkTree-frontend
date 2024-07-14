@@ -8,7 +8,7 @@ import { Button } from "../components/Button";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
-  url: z.string().url("Link must be a valid URL").min(1, "Link is required"),
+  url: z.string().url("Link must be a valid URL http://example.com").min(1, "Link is required"),
 });
 
 export type LinksFormData = z.infer<typeof formSchema>;

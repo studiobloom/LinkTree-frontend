@@ -24,6 +24,7 @@ export type SocialLink = {
 export type UpdateMyUserRequest = {
   name?: string;
   imageFile?: File;
+  bio?:string;
 };
 // Define the structure for the user profile
 export type UserProfile = {
@@ -75,7 +76,8 @@ export type User = {
   _id: string;
   email: string;
   name: string;
-  avater:string
+  avater:string;
+  bio:string
  
 };
 

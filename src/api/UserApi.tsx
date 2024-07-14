@@ -103,6 +103,10 @@ export const useCreateMyUser = () => {
       if (formData.imageFile) {
         data.append('imageFile', formData.imageFile);
       }
+
+      if (formData.bio) {
+        data.append('bio', formData.bio);
+      }
   
       const response = await fetch(`${API_BASE_URL}/api/my/user`, {
         method: "PUT",
@@ -116,7 +120,6 @@ export const useCreateMyUser = () => {
         const errorData = await response.json();
         throw new Error(errorData.message || "Failed to update user");
       }
-  
       return response.json();
     };
   
@@ -135,3 +138,16 @@ export const useCreateMyUser = () => {
   };
 
    
+
+  // src/api/UserApi.ts
+
+export const useGetUserByUsername = (username: string) => {
+  return useQuery(["user", username], () =>
+    fetch(`${API_BASE_URL}/api/my/user/${username}`).then((res) => {
+      if (!res.ok) {
+        throw new Error("Failed to fetch user");
+      }
+      return res.json();
+    })
+  );
+};

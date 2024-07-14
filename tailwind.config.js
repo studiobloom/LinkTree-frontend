@@ -10,9 +10,9 @@ module.exports = {
           light: '#D6BBFB',
           light2:'d1beef',
           DEFAULT: '#9F7AEA',
-          dark: '#6B46C1',
+          dark: '#4C3BCF',
           dark2:'#4000a5',
-          dark3:'463263'
+          dark3:'850F8D'
         },
         paragraphColor: {
           white: '#F3F4F6',
