@@ -7,11 +7,7 @@ export type Link = {
   url: string;
 }
 
-type EditLinkData = {
-  name: string;
-  url: string;
-  linkId: string;
-}
+
 
 
 // Define the structure for social media links

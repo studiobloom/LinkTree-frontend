@@ -1,7 +1,6 @@
 // src/forms/ImageForm.tsx
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "../components/Button";
 import { useForm } from "react-hook-form";
 
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
@@ -56,13 +55,13 @@ const ImageForm = ({ onSave, isLoading }: ImageFormProps) => {
         />
         {errors.imageFile && <p className="text-red-600">{errors.imageFile.message as string}</p>}
       </div>
-      <Button
+      <button
         type="submit"
         disabled={isLoading}
         className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-200"
       >
         {isLoading ? 'Uploading...' : 'Upload'}
-      </Button>
+      </button>
     </form>
   );
 };

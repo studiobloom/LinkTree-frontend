@@ -1,11 +1,9 @@
-import React from "react";
 import hero from "../assets/ad-transformedlast.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import { motion } from "framer-motion";
 
 const LandingPage = () => {
   const { loginWithRedirect } = useAuth0();
-  const { logout } = useAuth0();
 
   const textVariants = {
     hidden: { opacity: 0, y: 20 },

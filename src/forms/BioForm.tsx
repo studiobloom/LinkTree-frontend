@@ -1,7 +1,6 @@
 // src/forms/BioForm.tsx
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "../components/Button";
 import { useForm } from "react-hook-form";
 
 const MAX_BIO_LENGTH = 160;
@@ -43,7 +42,7 @@ const BioForm = ({ onSave, isLoading, defaultValue = '' }: BioFormProps) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <h2 className="text-xl font-bold">Update Bio</h2>
-      
+     
       <div>
         <label htmlFor="bio" className="block text-sm font-medium text-gray-700">
           Your Bio
@@ -60,14 +59,14 @@ const BioForm = ({ onSave, isLoading, defaultValue = '' }: BioFormProps) => {
         </p>
         {errors.bio && <p className="text-red-600">{errors.bio.message}</p>}
       </div>
-      
-      <Button
+     
+      <button
         type="submit"
         disabled={isLoading}
         className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-200"
       >
         {isLoading ? 'Updating...' : 'Update Bio'}
-      </Button>
+      </button>
     </form>
   );
 };

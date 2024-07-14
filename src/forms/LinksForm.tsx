@@ -4,7 +4,6 @@
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Button } from "../components/Button";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -69,13 +68,13 @@ const LinksForm = ({
         />
         {errors.url && <p className="text-red-600">{errors.url.message}</p>}
       </div>
-      <Button
+      <button
         type="submit"
         disabled={isLoading}
         className="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition duration-200"
       >
         {buttonText}
-      </Button>
+      </button>
     </form>
   );
 };

@@ -1,5 +1,5 @@
 // src/pages/UserLinksPage.tsx
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import { useGetLinksByUsername } from "../api/LinksApi";
 import { useEffect } from "react";
 import { toast } from "sonner";
@@ -21,7 +21,7 @@ const UserLinksPage = () => {
     data: links, 
     isLoading: isLinksLoading, 
     isError: isLinksError, 
-    refetch 
+     
   } = useGetLinksByUsername(username!);
 
   useEffect(() => {

@@ -3,7 +3,6 @@ import { useMutation,useQuery } from "react-query";
 import { toast } from "sonner";
 import {User} from "../types"
 import {UpdateMyUserRequest,} from "../types"
-import { get } from "react-hook-form";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
