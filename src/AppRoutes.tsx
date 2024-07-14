@@ -1,4 +1,3 @@
-import './index.css';
 import './pages/ProfilePage';
 import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from './layouts/layout';
