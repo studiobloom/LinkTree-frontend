@@ -18,7 +18,7 @@ const LinksPage = () => {
 
   const { mutateAsync: createLink, isLoading: isCreateLoading } = useCreateLinks();
   const { mutateAsync: updateLink, isLoading: isUpdateLoading } = useUpdateLinks();
-  const { mutateAsync: deleteLink, isLoading: isDeleteLoading } = useDeleteLink();
+  const { mutateAsync: deleteLink } = useDeleteLink();
   const { data: links, isLoading: isLinksLoading, refetch: refetchLinks } = useGetLinks();
 
   const [isAddingUserName, setIsAddingUserName] = useState(false);
@@ -54,7 +54,11 @@ const LinksPage = () => {
   };
 
   const handleEditClick = (link: Link) => {
-    setEditLinkData({ ...link, linkId: link._id });
+    setEditLinkData({ 
+      name: link.name,  // Change this from link.title to link.name
+      url: link.url, 
+      linkId: link._id 
+    });
     setIsEditDialogOpen(true);
   };
 
@@ -159,12 +163,13 @@ const LinksPage = () => {
 
       {/* Preview */}
       <div className="w-80 bg-gray-800 p-4 hidden lg:block">
-        <div className="bg-gray-700 rounded-3xl overflow-hidden shadow-lg p-4" style={{ aspectRatio: '9/19' }}>
+        <div className="bg-purple-700 rounded-3xl overflow-hidden shadow-lg p-4" style={{ aspectRatio: '9/19' }}>
           <div className="flex flex-col items-center">
             <h3 className="mb-1 text-white font-extrabold">Preview</h3>
 
             <img src={currentUser?.avater ||Noavater} className="w-24 h-24 rounded-full mb-4" />
             <h2 className="text-xl font-bold text-white">{currentUser?.name}</h2>
+            <p className='text-paragraphColor-white text-center'>{currentUser?.bio}</p>
             <div className="mt-4 w-full">
               {links?.map(link => (
                 <a
@@ -172,7 +177,7 @@ const LinksPage = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-gray-600 text-center py-2 rounded-md mb-2 hover:bg-gray-700 transition duration-200 text-white"
+                  className="bg-purple-500 hover:bg-purpleTheme-dark2 rounded  transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg   block px-4 py-2 my-2 text-center text-white"
                 >
                   {link.name}
                 </a>

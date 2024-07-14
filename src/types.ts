@@ -3,7 +3,7 @@
 // Define the structure for a single link
 export type Link = {
   _id: string;
-  title: string;
+  name: string;
   url: string;
 }
 
