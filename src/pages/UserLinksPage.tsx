@@ -1,5 +1,4 @@
-// src/pages/UserLinksPage.tsx
-import {  useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, NavLink } from "react-router-dom";
 import { useGetLinksByUsername } from "../api/LinksApi";
 import { useEffect } from "react";
 import { toast } from "sonner";
@@ -21,7 +20,6 @@ const UserLinksPage = () => {
     data: links, 
     isLoading: isLinksLoading, 
     isError: isLinksError, 
-     
   } = useGetLinksByUsername(username!);
 
   useEffect(() => {
@@ -56,15 +54,19 @@ const UserLinksPage = () => {
       <div className="w-full max-w-md mt-3">
         {links?.map(link => (
           <div key={link._id} >
-            <a href={link.url} className="bg-purple-500 hover:bg-purpleTheme-dark2 rounded  transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg   block px-4 py-2 my-2 text-center text-white " target="_blank" rel="noopener noreferrer">
+            <a href={link.url} 
+               className="bg-purple-500 hover:bg-purpleTheme-dark2 rounded transition-transform transform-gpu hover:-translate-y-1 hover:shadow-lg block px-4 py-2 my-2 text-center text-white "
+               target="_blank" 
+               rel="noopener noreferrer">
               {link.name}
             </a>
           </div>
         ))}
       </div>
       <div className="tw-full text-center mt-4 py-2 bg-rounded text-purpleTheme-light">
-
-        <a  href="#">Join {username} on EchoLink today </a>
+        <NavLink to="/signup" className="hover:underline">
+          Join {username} on EchoLink today
+        </NavLink>
       </div>
     </div>
   );
