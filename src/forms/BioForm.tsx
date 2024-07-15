@@ -9,9 +9,7 @@ const formSchema = z.object({
   bio: z
     .string()
     .max(MAX_BIO_LENGTH, `Bio must be ${MAX_BIO_LENGTH} characters or less`)
-    .refine((bio) => /^[a-zA-Z0-9 ,.!?'"-]+$/.test(bio), {
-      message: "Bio contains invalid characters",
-    }),
+    
 });
 
 export type BioFormData = z.infer<typeof formSchema>;
