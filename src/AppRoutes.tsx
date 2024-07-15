@@ -32,11 +32,11 @@ const AppRoutes = () => {
         />
       </Route>
       <Route
-        path="/:username"
+        path="/user/:username"
         element={
-         
+          <Layout>
             <UserLinksPage />
-         
+          </Layout>
         }
       />
       <Route path="*" element={<Navigate to="/" />} />
