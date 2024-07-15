@@ -11,7 +11,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'dist', // Change this to 'dist'
+    outDir: 'dist', // Ensure this matches the directory Render is looking for
   },
-  
+  base: '/', // Ensure this is set correctly
 });
