@@ -34,9 +34,9 @@ const AppRoutes = () => {
       <Route
         path="/:username"
         element={
-          <Layout>
+         
             <UserLinksPage />
-          </Layout>
+         
         }
       />
       <Route path="*" element={<Navigate to="/" />} />
