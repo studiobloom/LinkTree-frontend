@@ -119,7 +119,7 @@ const LinksPage = () => {
 
   return (
     <div className="flex flex-col h-max bg-gray-900 lg:flex-row min-h-screen">
-      <Sidebar email={currentUser?.email} />
+      <Sidebar email={currentUser?.name} />
 
       {/* Main content */}
       <div className="flex-1 p-4 h-max lg:p-10 justify-center items-center">

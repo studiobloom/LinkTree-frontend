@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { toast } from "sonner";
 import { useGetUserByUsername } from "../api/UserApi";
 import LoadingIcons from 'react-loading-icons'
-import { noavater } from "../types";
+import Noavater from '../assets/noavatar.jpg';
 
 const UserLinksPage = () => {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ const UserLinksPage = () => {
     <div className="flex flex-col items-center h-full">
       <img
         className="mb-4 w-24 h-24 rounded-full"
-        src={user?.avater || noavater}
+        src={user?.avater || Noavater}
         alt="profileImg"
       />
       <h1 className="text-paragraphColor-white text-2xl font-semibold hover:bg-purpleTheme-light">

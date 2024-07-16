@@ -9,8 +9,8 @@ const Sidebar = ({ email }: SidebarProps) => {
   return (
     <div className="bg-gray-800 min-w-[280px] md:min-w-[280px]" id="sidebar">
       <div className="p-4">
-        <h1 className="text-xl font-bold text-white">EchoLink Dashboard</h1>
-        <h1>{email}</h1>
+        <h1 className="text-xl font-bold text-white mb-2">EchoLink Dashboard</h1>
+        <h1 className='text-white tex'>Welcome Back {email}</h1>
       </div>
       <nav className="mt-4 flex flex-col">
         <NavLink
