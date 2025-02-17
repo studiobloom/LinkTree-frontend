@@ -1,6 +1,4 @@
-Certainly! Below is the **Markdown (MD)** code for the styled and polished version of your content:
 
-```markdown
 # 🌐 **Echolinks**
 
 **Echolinks** is an open-source **link-sharing platform** that lets users **centralize all their social links in one place**. Built with **React, TypeScript, Vite, and MongoDB**, it provides a fast and modern experience for creating a customizable profile page.
@@ -76,14 +74,19 @@ We welcome contributions! To contribute, follow these steps:
 
 1. Fork the repository and clone it locally:
    ```bash
-   git clone https://github.com/your-username/LinkTree-backend.git
-   git clone https://github.com/your-username/LinkTree-frontend.git
-   ```
+  git clone https://github.com/adelsultann/LinkTree-backend.git
+
+git clone https://github.com/adelsultann/LinkTree-frontend.git
+
+   
+
 
 2. Create a new branch for your feature:
-   ```bash
+```bash
    git checkout -b feature-name
-   ```
+
+```
+
 
 3. Commit your changes:
    ```bash
@@ -110,7 +113,3 @@ This project is licensed under the **MIT License** – see the [LICENSE](https:/
 
 ---
 
-### **How It Looks When Rendered**
-When rendered in a Markdown viewer (e.g., GitHub, VS Code Preview, or any Markdown editor), this code will display as a clean, professional, and well-structured document. 
-
-Let me know if you need further adjustments! 😊
