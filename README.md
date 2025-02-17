@@ -1,30 +1,48 @@
-# React + TypeScript + Vite
+# 🌐 Echolinks  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Echolinks** is an open-source **link-sharing platform** that lets users **centralize all their social links in one place**. Built with **React, TypeScript, Vite, and MongoDB**, it provides a fast and modern experience for creating a customizable profile page.  
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [Echolinks](https://www.echolinks.live/)  
+📂 **GitHub Repo:** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+backend 
 
-## Expanding the ESLint configuration
+https://github.com/adelsultann/LinkTree-backend
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Frontend
 
-- Configure the top-level `parserOptions` property like this:
+https://github.com/adelsultann/LinkTree-frontend
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+---
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 🚀 Features  
+✔️ Centralized **profile for sharing links**  
+✔️ **Customizable UI** with an intuitive interface  
+✔️ **Fast & optimized** with Vite and TypeScript  
+✔️ **Secure backend** powered by MongoDB  
+✔️ **Mobile-friendly** design  
+
+---
+
+## 📦 Installation  
+
+### **1️⃣ Clone the repository**  
+```bash
+
+
+Backend
+
+https://github.com/adelsultann/LinkTree-backend.git
+
+Frontend
+
+https://github.com/adelsultann/LinkTree-frontend.git
+
+2️⃣ Install dependencies
+
+....
+npm install
+
+....
+
+
