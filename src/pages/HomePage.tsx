@@ -1,4 +1,4 @@
-import hero from "../assets/ad-transformedlast.png";
+import hero from "../assets/newlogo.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import { motion } from "framer-motion";
 
@@ -30,7 +30,7 @@ const LandingPage = () => {
         <img
           src={hero}
           alt="EchoLink App"
-          className="w-[300px] md:w-[450px] lg:w-[500px]"
+          className="w-[300px] md:w-[600px] lg:w-[500px] "
         />
       </div>
 
