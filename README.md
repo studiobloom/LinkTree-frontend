@@ -38,8 +38,14 @@ Frontend
 
 https://github.com/adelsultann/LinkTree-frontend.git
 ....
+
+
 2️⃣ Install dependencies
 
+....
+npm install
+
+....
 
 
 
