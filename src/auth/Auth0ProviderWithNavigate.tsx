@@ -13,10 +13,11 @@ const Auth0ProviderWithNavigate = ({ children }: Props) => {
   const navigate = useNavigate();
 
   // Getting Auth0 configuration from environment variables
-  const domain = import.meta.env.AUTH0_DOMAIN;
-  const clientId = import.meta.env.AUTH0_CLIENT_ID;
-  const redirectUri = import.meta.env.AUTH0_CALLBACK_URL;
-  const audience = import.meta.env.AUTH0_AUDIENCE;
+  const viteEnv = import.meta.env;
+  const domain = viteEnv.VITE_AUTH0_DOMAIN || viteEnv.AUTH0_DOMAIN;
+  const clientId = viteEnv.VITE_AUTH0_CLIENT_ID || viteEnv.AUTH0_CLIENT_ID;
+  const redirectUri = viteEnv.VITE_AUTH0_CALLBACK_URL || viteEnv.AUTH0_CALLBACK_URL || window.location.origin + "/auth-callback";
+  const audience = viteEnv.VITE_AUTH0_AUDIENCE || viteEnv.AUTH0_AUDIENCE;
 
   // If any of the configuration values are missing, throw an error
   if (!domain || !clientId || !redirectUri || !audience) {
