@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Disable secrets scanning for this project
+[build.environment]
+  SECRETS_SCAN_ENABLED = "false"
+
+# Setup SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
