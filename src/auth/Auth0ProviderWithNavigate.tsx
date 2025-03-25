@@ -13,9 +13,9 @@ const Auth0ProviderWithNavigate = ({ children }: Props) => {
   const navigate = useNavigate();
 
   // Getting Auth0 configuration from environment variables
-  const domain = import.meta.env.VITE_AUTH0_DOMAIN;
+  const domain = import.meta.env.AUTH0_DOMAIN;
   const clientId = import.meta.env.AUTH0_CLIENT_ID;
-  const redirectUri = import.meta.env.VITE_AUTH0_CALLBACK_URL;
+  const redirectUri = import.meta.env.AUTH0_CALLBACK_URL;
   const audience = import.meta.env.AUTH0_AUDIENCE;
 
   // If any of the configuration values are missing, throw an error
